@@ -1,0 +1,28 @@
+.card {
+    width: 10em;
+    height: 17em;
+    background-color: aqua;
+}
+#text-box {
+    display: inline;
+    background-color: blueviolet;
+    text-align: center;
+    width: 20em;
+    height: 10em;
+}
+#main {
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+#card-box {
+    gap: 50px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
