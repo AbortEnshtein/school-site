@@ -1,28 +1,49 @@
 .card {
-    width: 10em;
-    height: 17em;
+    width: 250px;
+    height: 400px;
     background-color: aqua;
-}
-#text-box {
-    display: inline;
-    background-color: blueviolet;
-    text-align: center;
-    width: 20em;
-    height: 10em;
 }
 #main {
     gap: 50px;
-    display: flex;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
 }
+#text-box {
+    background-color: aqua;
+    width: 800px;
+    height: 150px;
+}
 #card-box {
-    gap: 50px;
+    gap: 100px;
     display: inline-flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+}
+@media (max-width: 1200px) {
+    .card {width: 200px;height: 350px;}
+    #card-box {gap: 75px}
+    #text-box{width: 600px;height: 125px;}
+}
+@media (max-width: 1000px) {
+    .card {width: 175px;height: 300px;}
+    #card-box {gap: 50px}
+    #text-box{width: 500px;height: 100px;}
+}
+@media (max-width: 768px) {
+    .card {width: 125px;height: 225px;}
+    #card-box {gap: 50px}
+    #text-box{width: 450px;height: 75px;}
+}
+@media (max-width: 480px) {
+    .card {width: 125px;height: 175px;}
+    #card-box {gap: 25px}
+    #main {gap: 25;}
+    #text-box{width: 300px;height: 75px;}
 }
