@@ -1,4 +1,4 @@
-export default async function ServerComponent({id}: {id: Promise<{ slug: string }>}) {
-    const slug = (await id).slug
+export default async function ServerComponent({params}: {params: Promise<{ slug: string }>}) {
+    const slug = (await params).slug
     return (<>map-{slug}</>)
 }

@@ -5,7 +5,7 @@
 }
 #main {
     gap: 50px;
-    display: inline-flex;
+    display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
@@ -32,24 +32,50 @@
     position: absolute;
     z-index: -1;
 }
-@media (max-width: 1200px) {
+#img2 {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+#img3 {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+@media (max-width: 1300px) {
     .card {width: 200px;height: 350px;}
     #card-box {gap: 75px}
     #text-box{width: 600px;height: 125px;}
+    #img2 {display: none;}
+    #img3 {display: none;}
+    #img {display: inline;}
 }
 @media (max-width: 1000px) {
     .card {width: 175px;height: 300px;}
     #card-box {gap: 50px}
     #text-box{width: 500px;height: 100px;}
+    #img2 {display: none;}
+    #img3 {display: none;}
+    #img {display: inline;}
 }
 @media (max-width: 768px) {
     .card {width: 125px;height: 225px;}
     #card-box {gap: 50px}
     #text-box{width: 450px;height: 75px;}
+    #img {display: none;}
+    #img2 {display: inline;}
+    #img3 {display: none;}
 }
 @media (max-width: 480px) {
     .card {width: 125px;height: 175px;}
     #card-box {gap: 25px}
     #main {gap: 25;}
+    #img {display: none;}
+    #img2 {display: none;}
+    #img3 {display: inline;}
     #text-box{width: 300px;height: 75px;}
 }
