@@ -3,6 +3,23 @@
     height: 400px;
     background-color: aqua;
 }
+#s {
+    display: block;
+    z-index: 4;
+}
+#i {
+    background-color: white;
+    border: solid;
+}
+.s {
+    position: absolute;
+    display: block;
+    left: 8px;
+    top: 10px;
+    z-index: 3;
+    height: 50px;
+    width: 50px;
+}
 #main {
     gap: 50px;
     display: flex;
@@ -14,11 +31,13 @@
     height: 100vh;
 }
 #text-box {
+    z-index: 2;
     background-color: aqua;
     width: 800px;
     height: 150px;
 }
 #card-box {
+    z-index: 2;
     gap: 100px;
     display: inline-flex;
     flex-wrap: wrap;
@@ -30,21 +49,21 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 }
 #img2 {
     display: none;
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 }
 #img3 {
     display: none;
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 }
 @media (max-width: 1300px) {
     .card {width: 200px;height: 350px;}
