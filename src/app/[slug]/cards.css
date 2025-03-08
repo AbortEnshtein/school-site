@@ -1,24 +1,100 @@
+@keyframes opt {
+    from {
+      opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.full {
+    height: var(--y);
+    width: var(--x);
+    position: absolute;
+    background-image: ;
+}
+#t-b {
+    position: absolute;
+    filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
 .card {
-    width: 250px;
-    height: 400px;
-    background-color: aqua;
-}
-#s {
-    display: block;
-    z-index: 4;
-}
-#i {
-    background-color: white;
+    --x: 250px;
+    --y: 400px;
+    width: var(--x);
+    height: var(--y);
+    background-size: cover;
+    display: flex;
     border: solid;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    
 }
-.s {
+#t2 {
+    font: 1.5em sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#t {
+    font: 1.8em sans-serif;
+    color: #ffffff;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    width: 100%;
+    margin-bottom: -25%;
+}
+#text {
+    background-color: rgba(0, 0, 0, 0.3);
+    filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    z-index: 3;
+}
+.card:hover {
+    width: calc(var(--x) + 10px);
+    height: calc(var(--y) + 10px);
+}
+#g {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+.back-box {
     position: absolute;
     display: block;
     left: 8px;
     top: 10px;
-    z-index: 3;
+    z-index: 4;
     height: 50px;
     width: 50px;
+    border: solid;
+    background-color: white;
+    transition: 2s;
+}
+.back-box:host {
+    opacity: 0;
+}
+.back {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
 }
 #main {
     gap: 50px;
@@ -31,8 +107,8 @@
     height: 100vh;
 }
 #text-box {
+    position: relative;
     z-index: 2;
-    background-color: aqua;
     width: 800px;
     height: 150px;
 }
@@ -45,56 +121,54 @@
     justify-content: center;
     align-items: center;
 }
-#img {
+.im {
+    display: flex;
+    align-self: center;
+    justify-self: center;
     width: 100vw;
     height: 100vh;
     position: absolute;
     z-index: 1;
+    pointer-events: none;
 }
-#img2 {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 1;
-}
-#img3 {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 1;
+@media (max-width: 4000px) {
+    #img {display: inline; width:1950px;}
+    .card {--x: 30vh;--y: 25vw;width: var(--x);height: var(--y);}
+    #card-box {gap: 75px}
+    #text-box{width: 50vw;height: 15vh;}
+    #img2 {display: none;}
+    #img3 {display: none;}
 }
 @media (max-width: 1300px) {
-    .card {width: 200px;height: 350px;}
-    #card-box {gap: 75px}
+    .card {--x: 200px;--y: 350px;width: var(--x);height: var(--y);}
+    #card-box {gap: 50px}
     #text-box{width: 600px;height: 125px;}
     #img2 {display: none;}
     #img3 {display: none;}
     #img {display: inline;}
 }
 @media (max-width: 1000px) {
-    .card {width: 175px;height: 300px;}
+    .card {--x: 175px;--y: 300px;width: var(--x);height: var(--y);}
     #card-box {gap: 50px}
     #text-box{width: 500px;height: 100px;}
-    #img2 {display: none;}
+    #img2 {display: inline;}
     #img3 {display: none;}
-    #img {display: inline;}
+    #img {display: none;}
 }
 @media (max-width: 768px) {
-    .card {width: 125px;height: 225px;}
+    .card {--x: 150px;--y: 275px;width: var(--x);height: var(--y);}
     #card-box {gap: 50px}
     #text-box{width: 450px;height: 75px;}
     #img {display: none;}
     #img2 {display: inline;}
     #img3 {display: none;}
 }
-@media (max-width: 480px) {
-    .card {width: 125px;height: 175px;}
-    #card-box {gap: 25px}
-    #main {gap: 25;}
+@media (max-width: 500px) {
+    .card {--x: 125px;--y: 200px;width: var(--x);height: var(--y);}
+    #card-box {gap: 26px;}
+    #main {gap: 25px;}
     #img {display: none;}
     #img2 {display: none;}
     #img3 {display: inline;}
-    #text-box{width: 300px;height: 75px;}
+    #text-box{width: 300px;height: 100px;}
 }
