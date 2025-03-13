@@ -21,7 +21,7 @@ export default async function ServerComponent({params}: {params: Promise<{ slug:
         const styling = {
             backgroundImage: `url('${level.card_img[i]}')`
         }
-        if (level.card_path==null){
+        if (level.card_path[0]=='undefined'){
             bod.push(<Link className='card' style={styling} href={'/'+`${level.id}`+`${i+1}`}><p id='t'>{level.card_text[i]}</p><p id='text'/></Link>)
         } else {
             bod.push(<Link className='card' style={styling} href={'/'+ `${level.card_path[i]}`}><p id='t'>{level.card_text[i]}</p><p id='text'/></Link>)
