@@ -13,7 +13,7 @@
     height: var(--y);
     background-size: cover;
     display: flex;
-    border: solid;
+    border: solid black;
     justify-content: end;
     align-items: end;
     flex-direction: column;
@@ -132,7 +132,7 @@
     #img3 {display: none;}
 }
 @media (max-width: 1750px) {
-    .card {--x: 250px;--y: 400px;width: var(--x);height: var(--y);font-size: 1em;}
+    .card {--x: 250px;--y: 450px;width: var(--x);height: var(--y);font-size: 1em;}
     #card-box {gap: 75px}
     #text-box{width: 950px;height: 175px;font-size: 1.3em;}
     #img2 {display: none;}
@@ -140,7 +140,7 @@
     #img {display: inline;}
 }
 @media (max-width: 1500px) {
-    .card {--x: 250px;--y: 400px;width: var(--x);height: var(--y);font-size: 1em;}
+    .card {--x: 250px;--y: 420px;width: var(--x);height: var(--y);font-size: 1em;}
     #card-box {gap: 75px}
     #text-box{width: 950px;height: 175px;font-size: 1.3em;}
     #img2 {display: none;}
