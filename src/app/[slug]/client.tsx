@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import '@/app/[slug]/cards.css'
  
-export default function ClientComponent({children, level, cards}: {children: React.ReactNode, level: {id:string,text:string,img:string[],card_count:number, card_text:string[],card_img:string[],card_path:string[]}, cards: React.JSX.Element[]}) {
+export default function ClientComponent({level, cards}: {children: React.ReactNode, level: {id:string,text:string,img:string[],card_count:number, card_text:string[],card_img:string[],card_path:string[]}, cards: React.JSX.Element[]}) {
   return (
     <div id='g'>
       <Image id='img'

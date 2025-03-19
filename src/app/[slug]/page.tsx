@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import ClientComponent from './client'
 import Link from 'next/link';
 
@@ -15,7 +15,7 @@ export default async function ServerComponent({params}: {params: Promise<{ slug:
     });
     const result = await pool.query(`SELECT * FROM levels WHERE id='${slug}'`)
     const level:{id:string,text:string,img:string[],card_count:number, card_text:string[],card_img:string[],card_path:string[]} = result.rows[0]
-    let bod:React.JSX.Element[] = []
+    const bod:React.JSX.Element[] = []
     if (level===undefined) {redirect('/')}
     for (let i=0; i<level.card_count;i++) {
         const styling = {
@@ -26,7 +26,6 @@ export default async function ServerComponent({params}: {params: Promise<{ slug:
         } else {
             bod.push(<Link className='card' style={styling} href={'/'+ `${level.card_path[i]}`}><p id='t'>{level.card_text[i]}</p><p id='text'/></Link>)
         }
-        
     }
-    return (<ClientComponent cards={bod} children={undefined} level={level} />)
+    return (<ClientComponent children={undefined} cards={bod} level={level} />)
 }
