@@ -5,6 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    user-select: none;
+    text-decoration: none;
 }
 #zag {
     display: flex;
@@ -39,6 +41,7 @@
     background-size: 100%;
     background-position: 100%;
     text-shadow: 8px 8px 16px rgb(0, 0, 0);
+    -webkit-user-drag: none;
 }
 #l1 {
     background-image: url('https://i.postimg.cc/nzYHyvx2/16-9.png');

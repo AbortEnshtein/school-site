@@ -17,7 +17,9 @@
     justify-content: end;
     align-items: end;
     flex-direction: column;
-    
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 #t2 {
     font: 1.5em sans-serif;
@@ -80,6 +82,9 @@
     display: block;
     position: absolute;
 }
+#img {pointer-events: none;}
+#img2 {pointer-events: none;}
+#img3 {pointer-events: none;}
 #main {
     gap: 50px;
     display: flex;
