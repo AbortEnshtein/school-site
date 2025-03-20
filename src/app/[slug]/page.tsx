@@ -26,6 +26,10 @@ export default async function ServerComponent({params}: {params: Promise<{ slug:
         } else {
             bod.push(<Link className='card' style={styling} href={'/'+ `${level.card_path[i]}`}><p id='t'>{level.card_text[i]}</p><p id='text'/></Link>)
         }
+    if (slug != '1' && slug != '2' && slug != '3' && slug != '4') {
+        const result2 = await pool.query(`Select * from en`)
+        await pool.query(`UPDATE en SET click = ${result2.rows[0].click+1}`)
+    }
     }
     return (<ClientComponent children={undefined} cards={bod} level={level} />)
 }
