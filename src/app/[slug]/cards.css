@@ -154,7 +154,7 @@
 }
 @media (max-width: 1100px) {
     .card {--x: 200px;--y: 350px;width: var(--x);height: var(--y);font-size: 0.8em;}
-    #card-box {gap: 50px}
+    #card-box {gap: 20px}
     #text-box{width: 600px;height: 150px; font-size: 1em}
     #img2 {display: inline;}
     #img3 {display: none;}
@@ -177,7 +177,7 @@
     #img3 {display: inline;}
     #text-box{width: 380px;height: 130px;font-size: 0.7em;}
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .card {--x: 125px;--y: 225px;width: var(--x);height: var(--y);font-size: 0.5em}
     #card-box {gap: 25px;}
     #main {gap: 25px;}

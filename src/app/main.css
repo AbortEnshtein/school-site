@@ -37,8 +37,8 @@
     justify-content: center;
     width: 500px;
     height: 100px;
-    color: white;
-    border: solid black;
+    color: rgb(255, 255, 254);
+    border: solid #000000;
     background-size: 100%;
     background-position: 100%;
     text-shadow: 8px 8px 16px rgb(0, 0, 0);
@@ -61,11 +61,11 @@
     #zag {background-image: url('https://i.postimg.cc/zXtCSs5N/16-9_бояре.png');
     font-size: 5em;
     background-position-y: -100px;}
-    .butlink {width: 500;}
+    .butlink {width: 500px;}
 }
 @media (max-width: 768px) {
     #zag {background-image: url('https://i.postimg.cc/zXtCSs5N/9-16_бояре.png');
     font-size: 2.5em;
     background-position-y: 0px;}
-    .butlink {width: 100%;}
+    .butlink {width: 100%;border:solid 0px;border-top:solid black;border-bottom:solid black}
 }
